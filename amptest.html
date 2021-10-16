@@ -28,3 +28,10 @@
     <a href="https://www.forbes.com/test/vsupitskiy/amp3.html">AMP 3</a>
     <br>
 </body>
+    <script>
+  window.onload = () => {
+    document.querySelectorAll("a").forEach(link =>
+      link.href += "cachebust=" + (Math.random() + 1).toString(36).substring(7)
+    );
+  };
+</script>
